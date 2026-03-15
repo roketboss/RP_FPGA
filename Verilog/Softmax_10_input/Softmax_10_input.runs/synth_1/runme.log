@@ -1,0 +1,332 @@
+
+*** Running vivado
+    with args -log softmax_layer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source softmax_layer.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Sun Mar 15 15:39:26 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source softmax_layer.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 503.922 ; gain = 210.832
+Command: synth_design -top softmax_layer -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27608
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1009.344 ; gain = 501.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'softmax_layer' [C:/Users/OMEN/Assignment2_3/Softmax/Softmax.srcs/sources_1/new/softmax_layer.v:39]
+INFO: [Synth 8-6157] synthesizing module 'exp_lut' [C:/Users/OMEN/Assignment2_3/Softmax/Softmax.srcs/sources_1/new/softmax_layer.v:22]
+INFO: [Synth 8-3876] $readmem data file 'exp_values.mem' is read successfully [C:/Users/OMEN/Assignment2_3/Softmax/Softmax.srcs/sources_1/new/softmax_layer.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'exp_lut' (0#1) [C:/Users/OMEN/Assignment2_3/Softmax/Softmax.srcs/sources_1/new/softmax_layer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_layer' (0#1) [C:/Users/OMEN/Assignment2_3/Softmax/Softmax.srcs/sources_1/new/softmax_layer.v:39]
+WARNING: [Synth 8-7129] Port x_in[15] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[14] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[13] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[12] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[3] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[2] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[1] in module exp_lut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_in[0] in module exp_lut is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1117.133 ; gain = 609.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1117.133 ; gain = 609.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1117.133 ; gain = 609.254
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1117.133 ; gain = 609.254
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   20 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 5     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 2     
+	               17 Bit    Registers := 5     
+	               16 Bit    Registers := 10    
+	               15 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                    ROMs := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port in_z_flat[159] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[158] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[157] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[156] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[147] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[146] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[145] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[144] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[143] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[142] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[141] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[140] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[131] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[130] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[129] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[128] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[127] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[126] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[125] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[124] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[115] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[114] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[113] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[112] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[111] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[110] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[109] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[108] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[99] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[98] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[97] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[96] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[95] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[94] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[93] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[92] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[83] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[82] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[81] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[80] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[79] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[78] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[77] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[76] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[67] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[66] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[65] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[64] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[63] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[62] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[61] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[60] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[51] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[50] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[49] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[48] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[47] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[46] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[45] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[44] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[35] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[34] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[33] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[32] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[31] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[30] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[29] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[28] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[19] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[18] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[17] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[16] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[15] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[14] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[13] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[12] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[3] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[2] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[1] in module softmax_layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_z_flat[0] in module softmax_layer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1342.387 ; gain = 834.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------+-------------------------------------+---------------+----------------+
+|Module Name   | RTL Object                          | Depth x Width | Implemented As | 
++--------------+-------------------------------------+---------------+----------------+
+|softmax_layer | bit_mapping[7].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[6].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[5].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[4].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[9].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[8].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[3].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[2].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[1].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
+|softmax_layer | bit_mapping[0].lut_inst/exp_out_reg | 256x15        | Block RAM      | 
++--------------+-------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1358.215 ; gain = 850.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[7].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[7].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[5].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[5].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[9].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[9].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[3].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[3].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[1].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bit_mapping[1].lut_inst/exp_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1358.215 ; gain = 850.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1573.074 ; gain = 1065.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1573.074 ; gain = 1065.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1573.074 ; gain = 1065.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1573.074 ; gain = 1065.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.074 ; gain = 1067.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.074 ; gain = 1067.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   832|
+|3     |LUT1     |   306|
+|4     |LUT2     |   427|
+|5     |LUT3     |  2335|
+|6     |LUT4     |    14|
+|7     |LUT6     |     1|
+|8     |RAMB18E1 |     5|
+|9     |FDRE     |   294|
+|10    |IBUF     |    82|
+|11    |OBUF     |   161|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------------+----------+------+
+|      |Instance                    |Module    |Cells |
++------+----------------------------+----------+------+
+|1     |top                         |          |  4458|
+|2     |  \bit_mapping[1].lut_inst  |exp_lut   |   769|
+|3     |  \bit_mapping[3].lut_inst  |exp_lut_0 |   769|
+|4     |  \bit_mapping[5].lut_inst  |exp_lut_1 |   769|
+|5     |  \bit_mapping[7].lut_inst  |exp_lut_2 |   769|
+|6     |  \bit_mapping[9].lut_inst  |exp_lut_3 |   769|
++------+----------------------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.074 ; gain = 1067.195
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 89 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.074 ; gain = 1067.195
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.074 ; gain = 1067.195
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1588.125 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 837 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d92f76c8
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1712.480 ; gain = 1208.559
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1712.480 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/OMEN/Assignment2_3/Softmax/Softmax.runs/synth_1/softmax_layer.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file softmax_layer_utilization_synth.rpt -pb softmax_layer_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 15 15:39:56 2026...
